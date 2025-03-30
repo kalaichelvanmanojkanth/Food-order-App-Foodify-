@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.loginpage"
+    android:background="@color/yellow">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hi Richard"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/pro"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+
+            android:padding="8dp"
+            android:src="@drawable/pro" />
+    </LinearLayout>
+
+    <!-- Search Bar -->
+
+    <!-- Free Delivery Banner -->
+
+    <!-- Categories Section -->
+
+    <!-- Popular Section -->
+
+    <!-- Bottom Navigation -->
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_margin="16dp"
+        android:background="@drawable/edit_textbox"
+
+        android:hint="Search food"
+        android:padding="12dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/banner_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search_bar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner" />
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banne" />
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bann" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/categories_label"
+        android:layout_width="129dp"
+        android:layout_height="34dp"
+
+        android:layout_below="@id/banner_scroll"
+        android:text="Categories"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_below="@id/popular_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.549"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <LinearLayout
+            android:id="@+id/categories"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_below="@id/categories_label"
+            android:layout_marginTop="2dp"
+
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            >
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_textbox"
+
+                android:layout_marginEnd="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Pizza"
+
+                    android:src="@drawable/piza" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_textbox"
+                android:backgroundTint="@color/black"
+
+                android:layout_marginEnd="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:contentDescription="Burger"
+                    android:src="@drawable/burg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_textbox"
+
+                android:layout_marginEnd="8dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:contentDescription="Drink"
+                    android:src="@drawable/drink" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_textbox"
+                android:backgroundTint="@color/black"
+
+                android:layout_marginEnd="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Pizza"
+
+                    android:src="@drawable/chicken" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:id="@+id/popular_label"
+        android:layout_width="126dp"
+        android:layout_height="27dp"
+
+        android:text="Popular"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.642" />
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/home"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#FF5722"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/track1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_add_location_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_add_shopping_cart_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cart"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginEnd="8dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="Hotdog"
+                    android:src="@drawable/chicken" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_account_circle_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/popular"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+
+
+        android:layout_above="@+id/linearLayout"
+        android:layout_below="@id/popular_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.876"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.853"
+            tools:layout_editor_absoluteX="-3dp">
+
+            <!-- Popular Item 1 -->
+            <LinearLayout
+                android:id="@+id/first"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:contentDescription="Pepperoni Pizza"
+                    android:src="@drawable/burger" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Cheese Burger"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rs.1000.00"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Popular Item 2 -->
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:contentDescription="Pepperoni Pizza"
+                    android:src="@drawable/pizaveg" />
+
+                <TextView
+                    android:layout_width="89dp"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Veg Pizza"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rs.1000.00"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:contentDescription="Cheese Burger"
+                    android:src="@drawable/burger" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Cheese Burger"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rs.1500.00"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Popular Item 3 -->
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:contentDescription="Veggie Pizza"
+                    android:src="@drawable/burger" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Veggie Pizza"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Rs.980.00"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

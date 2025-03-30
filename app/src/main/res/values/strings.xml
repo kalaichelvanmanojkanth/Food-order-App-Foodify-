@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="onboard">Welcome to Foodify, your go-to app for quick and easy food orders! Explore a world of delicious meals right at your fingertips.</string>
+    <string name="onboard1">Ordering your favorite meals has never been easier. With a simple tap, enjoy a seamless and convenient food ordering experience.</string>
+    <string name="onboard2">Enjoy lightning-fast delivery to your doorstep. Get your food delivered hot and fresh in no time with Foodify.</string>
+</resources>

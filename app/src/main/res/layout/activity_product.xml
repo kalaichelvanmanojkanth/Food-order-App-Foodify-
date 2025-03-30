@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.loginpage"
+    android:background="@color/yellow">
+
+    <!-- Back button -->
+
+    <!-- Favorite button -->
+
+    <!-- Product Image -->
+
+    <!-- Product Title -->
+
+    <!-- Product Description -->
+
+    <!-- Quantity Selector -->
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:contentDescription="Back Button"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="378dp"
+        android:layout_height="235dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edit_textbox"
+        android:contentDescription="Cheese Burger Image"
+        android:src="@drawable/burger"
+        app:layout_constraintBottom_toBottomOf="@+id/action_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_image"
+        android:layout_centerHorizontal="true"
+        android:text="Cheese Burger"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.439" />
+
+    <TextView
+        android:id="@+id/product_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_title"
+        android:gravity="center"
+        android:text="A mouthwatering cheese burger crafted with a juicy beef patty, melted cheese, crispy lettuce, fresh tomatoes, and a toasted sesame bun. Perfectly seasoned and served with love, this burger is a treat for your taste buds. Indulge in its rich flavors and enjoy every bite!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.681"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@+id/quantity_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_description"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/decrease_quantity"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:contentDescription="Decrease Quantity"
+            android:src="@drawable/minus" />
+
+        <TextView
+            android:id="@+id/quantity_text"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@color/black"
+            android:gravity="center"
+            android:text="01"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/increase_quantity"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:contentDescription="Increase Quantity"
+            android:src="@drawable/plus" />
+    </LinearLayout>
+
+    <!-- Product Price -->
+
+    <!-- Action Buttons -->
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quantity_selector"
+        android:layout_centerHorizontal="true"
+        android:text="Rs1000.00"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823" />
+
+    <LinearLayout
+        android:id="@+id/action_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_price"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/add_to_cart_button"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:text="Add to Cart"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/buy_now_button"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:backgroundTint="@color/black"
+            android:text="Buy Now"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
